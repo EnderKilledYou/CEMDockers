@@ -37,4 +37,4 @@ Find the port from the documentation of the app (rocketchat here) which is 3000
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://opensource.org/license/mit/)

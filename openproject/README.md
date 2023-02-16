@@ -32,4 +32,4 @@ docker-compose up -d openproject
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://opensource.org/license/mit/)

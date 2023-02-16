@@ -32,4 +32,4 @@ docker-compose up -d trilium
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://opensource.org/license/mit/)

@@ -1,7 +1,7 @@
 # docker-CEM
 
 
-[NginxReverse](nginxreverse/README.md) |  [Open Project](openproject/README.md) |  [Rocket Docker](rocketdocker/README.md)
+[NginxReverse](nginxreverse/README.md) |  [Open Project](openproject/README.md) |  [Rocket Docker](rocketdocker/README.md) |  [Trilium](trilium/README.md)
 
 ## Requirements / Dependencies
 
@@ -13,4 +13,4 @@
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://opensource.org/license/mit/)

@@ -48,4 +48,4 @@ Creating 185_docker-rocketchat_rocketchat_4         ... done
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://opensource.org/license/mit/)
