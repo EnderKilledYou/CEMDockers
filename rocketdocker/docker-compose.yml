@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+  rocketchat:
+    image: registry.rocket.chat/rocketchat/rocket.chat:latest
+    restart: unless-stopped
+    networks:
+      - nginxproxymanager
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./data/uploads:/app/uploads
+    environment:
+      MONGO_URL: "mongodb://mongodb:27017/parties?replicaSet=rs0"
+      ROOT_URL: "http://${ROCKETCHAT_HOST}:3000"
+      PORT: 3000
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: docker.io/bitnami/mongodb:4.4
+    restart: unless-stopped
+    networks:
+      - nginxproxymanager
+    volumes:
+      - ./data/db:/bitnami/mongodb
+      - ./snap/backups:/var/snap/rocketchat-server/common/
+    environment:
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_NAME: rs0
+      MONGODB_PORT_NUMBER: 27017
+      MONGODB_INITIAL_PRIMARY_HOST: mongodb
+      MONGODB_INITIAL_PRIMARY_PORT_NUMBER: 7017
+      MONGODB_ADVERTISED_HOSTNAME: mongodb
+      MONGODB_ENABLE_JOURNAL: 'true'
+      ALLOW_EMPTY_PASSWORD: 'yes'
+
+
+networks:
+  nginxproxymanager:
+    name: nginxproxymanager
+    external: true
+
+

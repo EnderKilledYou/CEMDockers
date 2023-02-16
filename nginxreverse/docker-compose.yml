@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nginxproxymanager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    networks:
+      - nginxproxymanager
+    ports:
+      - '80:80'
+      - '8880:81'
+      - '443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+networks:
+  nginxproxymanager:
+    name: nginxproxymanager
+    external: true
+#3jxRYKYgyR5QdZa
+#admin@test.com
