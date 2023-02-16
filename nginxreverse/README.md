@@ -25,7 +25,7 @@ Find the port from the documentation of the app (rocketchat here) which is 3000
       curl http://rocketchat:3000 
       #---- curl output should say got index.html ----
       exit
-      ```
+```
    
 ## Requirements / Dependencies
 
