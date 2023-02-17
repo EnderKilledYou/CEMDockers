@@ -1,19 +1,19 @@
 version: "3.7"
 
 services:
-  uptimekuma:
-    restart: unless-stopped
-    ports:
-        - '3001:3001'
-    volumes:
-        - '/home/clear/UptimeKuma:/app/data'
-    container_name: uptime-kuma
-    image: 'louislam/uptime-kuma:1'
-    networks:
-      - nginxproxymanager
+    uptime-kuma:
+        restart: unless-stopped
+        ports:
+            - '3001:3001'
+        volumes:
+            - '/home/clear/UptimeKuma:/app/data'
+        container_name: uptime-kuma
+        image: 'louislam/uptime-kuma:1'
+        networks:
+            - nginxproxymanager
 networks:
- nginxproxymanager:
-   name: nginxproxymanager
-   external: true
+  nginxproxymanager:
+    name: nginxproxymanager
+    external: true
 
 
