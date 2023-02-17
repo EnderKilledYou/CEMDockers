@@ -9,8 +9,8 @@ services:
             - '/home/clear/UptimeKuma:/app/data'
         container_name: uptime-kuma
         image: 'louislam/uptime-kuma:1'
-    networks:
-      - nginxproxymanager
+        networks:
+        - nginxproxymanager
 networks:
   nginxproxymanager:
     name: nginxproxymanager
