@@ -16,5 +16,4 @@ networks:
   nginxproxymanager:
     name: nginxproxymanager
     external: true
-#3jxRYKYgyR5QdZa
-#admin@test.com
+

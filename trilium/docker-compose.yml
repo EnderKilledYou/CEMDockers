@@ -4,8 +4,6 @@ services:
   trilium:
     image: zadam/trilium:latest
     restart: unless-stopped
-    ports:
-      - '9111:8080'
     container_name: trilium
     networks:
       - nginxproxymanager
